@@ -20,6 +20,12 @@ public class Main {
         // Creazione di un brano
         BranoDigitale br = new BranoDigitale(formato, titolo, autore);
         // br = brano
+        
+        // Stampa delle informazioni del brano
+        System.out.println("\nInformazioni del brano:");
+        System.out.println("Titolo: " + br.getTitolo());
+        System.out.println("Autore: " + br.getAutore());
+        System.out.println("Formato: " + br.getFormato());
 }
 }
 // Classi
@@ -29,25 +35,30 @@ class BranoDigitale {
     private String titolo;
     private String autore;
 
-    
+    // Variabili
     public BranoDigitale(String f, String t, String a) {
         formato = f;
         titolo = t;
         autore = a;
     }
 
-    
+    // Metodo autore
     public String getAutore() {
         return autore;
     }
 
-    
+    // Metodo titolo
     public String getTitolo() {
         return titolo;
     }
 
-    
+    // Metodo formato
     public String getFormato() {
         return formato;
+    }
+
+    // Metodo cambio
+    public void setFormato(String nuovoFormato) {
+        formato = nuovoFormato;
     }
 }
